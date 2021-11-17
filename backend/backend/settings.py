@@ -79,11 +79,11 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 DATABASE_URL="postgres://postgres:01fail10@127.0.0.1:5432/surfing"
 
 DATABASES = {
-    'default': dj_database_url.config(
-        default=DATABASE_URL
-    )
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators

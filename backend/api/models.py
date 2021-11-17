@@ -12,7 +12,7 @@ class Spot(models.Model):
     lon = models.FloatField()
     lat = models.FloatField()
     town_id = models.CharField(max_length = 3)
-    type_id = models.ForeignKey(Type,on_delete = models.CASCADE)
+    type = models.ForeignKey(Type,on_delete = models.CASCADE)
 
     def __str__(self):
         return f"{self.id}:{self.name}"
@@ -21,7 +21,7 @@ class Surfshop(models.Model):
     id = models.IntegerField(primary_key = True)
     name = models.TextField()
     address = models.TextField()
-    spot_id = models.ForeignKey(Spot,on_delete = models.CASCADE)
+    spot = models.ForeignKey(Spot,on_delete = models.CASCADE)
     rating = models.FloatField()
     operating_now = models.BooleanField()
 
@@ -32,13 +32,14 @@ class News(models.Model):
     news_id = models.IntegerField(primary_key = True)
     date = models.TextField()
     url = models.TextField()
-    spot_id = models.ForeignKey(Spot,on_delete = models.CASCADE)
+    title = models.TextField()
+    spot = models.ForeignKey(Spot,on_delete = models.CASCADE)
 
     def __str__(self):
         return self.news_id
 
 class Information(models.Model):
-    spot_id = models.ForeignKey(Spot,primary_key = True,on_delete = models.CASCADE)
+    spot = models.ForeignKey(Spot,primary_key = True,on_delete = models.CASCADE)
     date = models.DateField()
     wave_height = models.FloatField()
     wave_period = models.FloatField()
@@ -56,8 +57,8 @@ class Reviewer(models.Model):
     email = models.EmailField() 
 
 class Recommendation(models.Model):
-    reviewer_id = models.ForeignKey(Reviewer,on_delete = models.CASCADE)
-    spot_id = models.ForeignKey(Spot,on_delete = models.CASCADE)
+    reviewer = models.ForeignKey(Reviewer,on_delete = models.CASCADE)
+    spot = models.ForeignKey(Spot,on_delete = models.CASCADE)
     score = models.IntegerField()
     content = models.TextField()
     date = models.DateField()
