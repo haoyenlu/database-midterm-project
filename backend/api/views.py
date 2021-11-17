@@ -13,7 +13,10 @@ def town_list(request):
         return Response(town,status=status.HTTP_200_OK)
     
     if request.method == 'POST':
-        city = request.data['city']
+        try:
+            city = request.data['city']
+        except:
+            return Response("Some parameter is missing. required(city)",status=status.HTTP_400_BAD_REQUEST)
         town = list(Town.objects.filter(city=city).values_list('name'))
         return Response(town,status=status.HTTP_200_OK)
 
