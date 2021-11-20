@@ -31,7 +31,7 @@ def beach_search(request):
             city = request.data['city']
             town = request.data['town']
         except:
-            return Response("Some parameter is missing. required(City,Town,Beach,Date,Time)",status=status.HTTP_400_BAD_REQUEST)
+            return Response("Some parameter is missing. required(city,town)",status=status.HTTP_400_BAD_REQUEST)
         
         town_id = Town.objects.filter(city=city,name=town).values('id')
         beaches = list(Spot.objects.filter(town_id=town_id).values('name','lon','lat'))
