@@ -12,7 +12,7 @@
 
 ## Database
 - 使用 PostgreSQL 13 及 pgAdmin 4
-- db資料夾中的 SURF_empty.sql 和 SURF.sql 分別是僅有 Schema，沒有資料的空 database 及有資料的 database
+- db資料夾中的 SURF_empty.sql 和 SURF.sql 分別是僅有table，沒有資料的空檔案及已預先填入資料的檔案
 - data_crawl.ipynb 是負責爬取資料和將資料導入PostgreSQL的程式
 - 建立Database
      * 方案一 : 直接將現有資料庫 SURF.sql 匯入 PostgreSQL，方法可以參考[這裡](https://www.youtube.com/watch?v=C30q5i1e9KE)
