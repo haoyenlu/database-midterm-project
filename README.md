@@ -136,7 +136,8 @@ yarn start
 # for mac
 yarn add react-router-dom
 ```
-
+### Reference for frontend
+- **Navbar and side menu**：https://www.youtube.com/watch?v=I2UBjN5ER4s&t=4863s
 
 
 
