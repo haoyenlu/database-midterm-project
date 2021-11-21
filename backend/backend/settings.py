@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import dj_database_url
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -79,11 +80,11 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASE_URL="postgres://postgres:01fail10@127.0.0.1:5432/Surf"
+
 
 DATABASES = {
     'default': dj_database_url.config(
-        default=DATABASE_URL
+        default=config('DATABASE_URL')
     )
 }
 
