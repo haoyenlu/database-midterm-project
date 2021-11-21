@@ -25,11 +25,13 @@
 - **討論文件**：https://hackmd.io/_vPVxhaGRT6TIeWEMzvgWA
 - **API endpoint**: http://127.0.0.1:8000/api
 - **三個接口**
-    >GET /stations
+    >GET /town_list
+    
+    >POST /town_list
+    
+    >POST /beach_search
 
-    >POST /timetable/search
-
-    >POST /ticket/search
+    >POST /beach_information
 
 ## Backend
 
@@ -104,7 +106,7 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-用瀏覽器打開  http://127.0.0.1:8000/api/stations ，如果有順利拿到資源表示後端起成功。
+用瀏覽器打開  http://127.0.0.1:8000/api/town_list ，如果有順利拿到資源表示後端起成功。
 ![](img/api.png)
 
 ## Frontend
