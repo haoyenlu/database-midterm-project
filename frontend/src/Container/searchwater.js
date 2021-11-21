@@ -11,7 +11,7 @@ const SearchWater = ( { setFrom, setTo, setTime, setDate, setCheck } ) => {
             <h1>搜尋已知水域資料</h1>
                 <div class="wrap">
                     <div class="search">
-                        <input type="text" class="searchTerm" placeholder="想查詢已知的水域?"/>
+                        <input type="text" class="searchTerm" placeholder="     想查詢已知的水域?"/>
                         {/* <button type="submit" class="searchButton">
                             <i class="fa fa-search"></i>
                         </button> */}
