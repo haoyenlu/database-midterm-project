@@ -36,6 +36,12 @@ def beach_search(request):
         
         town_id = Town.objects.filter(city=city,name=town).values('id')[0]['id']
         beaches = list(Spot.objects.filter(town_id=town_id).values('name','lon','lat'))
+
+        for beach in beaches:
+            beach_type_id = Spot.objects.filter(name=beach["name"]).values('type')[0]['type']
+            beach_type = Type.objects.get(id=beach_type_id).name
+            beach["type"] = beach_type
+
         return Response(beaches,status=status.HTTP_200_OK)
 
         
@@ -50,7 +56,11 @@ def beach_information(request):
         except:
             return Response("Some parameter is missing. required(Beach)",status=status.HTTP_400_BAD_REQUEST)
         
-        spot_id = Spot.objects.get(name=beach_name).id
+        _spot = Spot.objects.get(name=beach_name)
+        spot_id = _spot.id
+        beach_type = _spot.type
+        
+
         surfshops = list(Surfshop.objects.filter(spot=spot_id).values('name','address','rating','operating_now'))
         news = list(News.objects.filter(spot=spot_id).values('date','url','title'))
         information = list(Information.objects.filter(spot=spot_id).values('date','wave_height','wave_period','wave_direction','wind_speed','wind_direction','temperature','sea_temperature','score'))
@@ -64,6 +74,7 @@ def beach_information(request):
         response_data['news'] = news
         response_data['information'] = information
         response_data['recommendation'] = recommendations
+        response_data['type'] = beach_type.name
 
         return Response(response_data,status=status.HTTP_200_OK)
 
