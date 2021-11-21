@@ -42,14 +42,12 @@
 
 ```shell
 # for mac
-cd backend
 python3 -m venv tutorial-env #建立虛擬環境 #-m: module-name
 source tutorial-env/bin/activate #啟動虛擬環境 for mac
 ```
 
 ```shell
 # for windows
-cd backend
 python3 -m venv tutorial-env #建立虛擬環境 #-m: module-name
 tutorial-env\Scripts\activate.bat #啟動虛擬環境 for windows
 ```
