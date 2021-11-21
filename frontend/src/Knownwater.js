@@ -1,9 +1,10 @@
 
 import { useState } from 'react';
 import MenuSet from './Container/MenuSet';
-import Schedule from './Container/Schedule';
+import SearchWater from './Container/searchwater';
 import Navbar from './Component/Navbar';
 import { BrowserRouter as Router, Routes, Route, Link, Redirect } from 'react-router-dom';
+import AllWater from './Container/allwater';
 
 
 
@@ -21,8 +22,8 @@ const Knownwater = () => {
         
         <Navbar />
        
-        <MenuSet setFrom={setFrom} setTo={setTo} setTime={setTime} setDate={setDate} setCheck={setCheck}/>
-        {check?<Schedule from={from} to={to} date={date} time={time}/>:<></>}
+        <SearchWater setFrom={setFrom} setTo={setTo} setTime={setTime} setDate={setDate} setCheck={setCheck}/>
+        {check?<AllWater from={from} to={to} date={date} time={time}/>:<></>}
         
         
         
