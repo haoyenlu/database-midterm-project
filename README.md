@@ -4,11 +4,11 @@
 > 此文件參考助教所提供之1101_NTUIM_DBM_web_tutorial/readme.md
 
 ### Contributors & Tasks
-- 林奕帆
-- 王佑豪
-- 呂皓恩
-- 陳德安
-- 劉為德
+- 林奕帆 Database schema design, data colleciton and process using postgreSQL
+- 王佑豪 Database schema design, data colleciton and process using postgreSQL
+- 呂皓恩 Back-end using Django, connect backend and frontend
+- 陳德安 frontend using ReactJS
+- 劉為德 report, video
 
 ## Database
 
