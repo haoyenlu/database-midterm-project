@@ -132,7 +132,7 @@ yarn start
 #### Step 3. 開啟瀏覽器 
 一般情況會自動開啟瀏覽器，若沒有請手動開啟 http://127.0.0.1:3000/ ，看到以下畫面即代表成功開啟前端且前後端連接成功。
 
-#### Step 4. 下載react-router-dom
+#### 注意：若遇到react相關error需下載react-router-dom
 如果遇到react-router-dom的相關error，請依照所使用的作業系統下載react-router-dom。
 
 ```shell
