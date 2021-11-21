@@ -8,8 +8,8 @@ import { BrowserRouter as Router, Routes, Route, Link, Redirect } from 'react-ro
 
 const Home = () => {
 
-    const [from, setFrom] = useState('宜蘭縣')
-    const [to, setTo] = useState('頭城鎮')
+    const [city, setCity] = useState('宜蘭縣')
+    const [town, setTown] = useState('頭城鎮')
     let now = new Date()
     const [date, setDate] = useState(now.getFullYear()+'/'+(now.getMonth()+1)+'/'+now.getDate())
     const [time, setTime] = useState('13:30')
@@ -19,8 +19,8 @@ const Home = () => {
         
         
         <Navbar />
-        <MenuSet setFrom={setFrom} setTo={setTo} setTime={setTime} setDate={setDate} setCheck={setCheck}/>
-        {check?<Schedule from={from} to={to} date={date} time={time}/>:<></>}
+        <MenuSet setCity={setCity} setTown={setTown} setTime={setTime} setDate={setDate} setCheck={setCheck}/>
+        {check?<Schedule from={city} to={town} date={date} time={time}/>:<></>}
         
         
     </>

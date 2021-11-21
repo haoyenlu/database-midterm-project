@@ -14,11 +14,9 @@ const Tab = ({ from, to, date, time }) => {
   const [tabel, setTable] = useState([])
 
   useEffect(() => {
-    axios.post('http://127.0.0.1:8000/api/timetable/search', {
-      "StartStation": from,
-      "EndStation": to,
-      "OutWardSearchDate": date,
-      "OutWardSearchTime": time
+    axios.post('http://127.0.0.1:8000/api/beach_search', {
+      "city": from,
+      "town": to
     })
     .then((res) => { 
       setTable(res.data)
@@ -29,23 +27,23 @@ const Tab = ({ from, to, date, time }) => {
   const columns = [
     {
       title: '水域名稱',  //原本是出發時間
-      dataIndex: 'waterName', //原本是startTime
-      key: 'waterName',  //原本是name
+      dataIndex: 'name', //原本是startTime
+      key: 'name',  //原本是name
     },
     {
       title: '水域類別',  //原本是行車時間
-      dataIndex: 'category', //原本是timeSpend
-      key: 'category', //原本是timeSpend
+      dataIndex: 'type', //原本是timeSpend
+      key: 'type', //原本是timeSpend
     },
     {
-      title: '氣溫',  //原本是抵達時間
-      dataIndex: 'temperature', //原本是arrivalTime
-      key: 'temperature', //原本是arrivalTime
+      title: '經度',  //原本是抵達時間
+      dataIndex: 'lon', //原本是arrivalTime
+      key: 'lon', //原本是arrivalTime
     },
     {
-      title: '天氣狀況',  //原本是車次
-      key: 'weatherCondition',  //原本是number
-      dataIndex: 'weatherCondition',  //原本是number
+      title: '緯度',  //原本是抵達時間
+      dataIndex: 'lat', //原本是arrivalTime
+      key: 'lat', //原本是arrivalTime
     },
     {
       title: '是否為浪點',  //原本是是否適用早鳥
