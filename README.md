@@ -12,10 +12,17 @@
 
 ## Database
 
-- 下載 [PostgreSQL 13](https://www.postgresql.org/download/) 以及 [pdAdmin](https://www.pgadmin.org/) (GUI介面)
-- db 資料夾裡有四個 sql 檔案，名稱裡有 empty 的代表為空 table 無資料的備份檔，其他兩份是有資料的備份檔。
-- `requests_tutorial.ipynb` 是生資料及抓資料的教學檔。
-- `de_init.ipynb` 示範如何把資料塞到 table 裡。
+## Database
+- 使用 PostgreSQL 13 及 pgAdmin 4
+- db資料夾中的 SURF_empty.sql 和 SURF.sql 分別是僅有 Schema，沒有資料的空 database 及有資料的 database
+- data_crawl.ipynb 是負責爬取資料和將資料導入PostgreSQL的程式
+- 建立Database
+     * 方案一 : 直接將現有資料庫 SURF.sql 匯入 PostgreSQL，方法可以參考[這裡](https://www.youtube.com/watch?v=C30q5i1e9KE)
+     * 方案二 : 執行 data_crawl.ipynb ，注意事項如下:
+        1. 程式使用到 Selenium 控制 Chrome 瀏覽器，所以請確保電腦上有安裝 [Chrome](https://support.google.com/chrome/answer/95346?hl=zh-Hant&co=GENIE.Platform%3DDesktop)
+        2. 程式使用到 Google Map API 中，所以需要一組 API KEY ([申請教學](https://www.ibest.com.tw/news-detail/google-map-api/))，請確認有啟用 Places API 及 Geocoding API。或者可以直接使用我們附在書面報告中的KEY
+        3. 請確認db資料夾中的 spots.csv 和程式是在同一個目錄下
+        4. 程式的執行時間大約是 10 ~ 15分鐘，請耐心等待
 
 * [Postgres setup on MacOS](https://www.youtube.com/watch?v=EZAa0LSxPPU)
 * [匯入/匯出現有資料庫 by pdAdmin](https://www.youtube.com/watch?v=C30q5i1e9KE)
