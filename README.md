@@ -1,5 +1,5 @@
-# 台灣高鐵時刻與票價查詢
-輸入起訖站以及出發日期與時間查詢適用高鐵車次與適用優惠
+# 全台遊憩水域資訊系統
+使用者輸入縣市、鄉鎮市區後，可以得知該地的水域、海灘相關資訊。
 
 ### Contributors & Tasks
 
@@ -128,11 +128,6 @@ yarn start
 yarn add react-router-dom
 ```
 
-#### 查詢選單
-![截圖 2021-10-17 下午10 53 03](https://user-images.githubusercontent.com/56534481/137632819-dfc1e96b-7a0b-4086-92fe-33ec2bd48c66.png)
-#### 車次時刻與適用優惠列表
-![截圖 2021-10-17 下午10 55 38](https://user-images.githubusercontent.com/56534481/137632908-d0b43156-b165-4858-8930-9734e7f4d5ca.png)
-#### 票價試算
-![截圖 2021-10-17 下午10 56 13](https://user-images.githubusercontent.com/56534481/137632935-88a6ca29-d65c-46be-9853-eb09fb4e91f2.png)
+
 
 
