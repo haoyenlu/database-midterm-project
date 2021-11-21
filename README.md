@@ -57,10 +57,11 @@ Package             Version
 asgiref             3.4.1
 dj-database-url     0.5.0
 Django              3.2.6
-django-cors-headers 3.8.0
+django-cors-headers 3.10.0
 djangorestframework 3.12.4
 pip                 21.3
 psycopg2            2.9.1
+psycogp2-binary     2.9.2
 python-decouple     3.4
 pytz                2021.1
 setuptools          47.1.0
