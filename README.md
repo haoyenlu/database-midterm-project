@@ -7,8 +7,8 @@
 - 林奕帆 Database schema design, data colleciton and process using postgreSQL
 - 王佑豪 Database schema design, data colleciton and process using postgreSQL
 - 呂皓恩 Back-end using Django, connect backend and frontend
-- 陳德安 frontend using ReactJS
-- 劉為德 report, video
+- 陳德安 Frontend using ReactJS
+- 劉為德 Report, video
 
 ## Database
 
