@@ -4,7 +4,11 @@
 > 此文件參考助教所提供之1101_NTUIM_DBM_web_tutorial/readme.md
 
 ### Contributors & Tasks
-
+- 林奕帆
+- 王佑豪
+- 呂皓恩
+- 陳德安
+- 劉為德
 
 ## Database
 
