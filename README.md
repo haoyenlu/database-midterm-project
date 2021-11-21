@@ -25,7 +25,6 @@
 
 
 ### API
-- **討論文件**：https://hackmd.io/_vPVxhaGRT6TIeWEMzvgWA
 - **API endpoint**: http://127.0.0.1:8000/api
 - **四個接口**
     >GET /town_list
