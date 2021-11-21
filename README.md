@@ -11,8 +11,6 @@
 - 劉為德 Report, video
 
 ## Database
-
-## Database
 - 使用 PostgreSQL 13 及 pgAdmin 4
 - db資料夾中的 SURF_empty.sql 和 SURF.sql 分別是僅有 Schema，沒有資料的空 database 及有資料的 database
 - data_crawl.ipynb 是負責爬取資料和將資料導入PostgreSQL的程式
