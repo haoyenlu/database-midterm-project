@@ -10,7 +10,7 @@ const Stations = ({ setFrom, setTo, setCheck }) => {
     const [stations, setStations] = useState([])
 
     useEffect(() => {
-        axios.get('http://127.0.0.1:8000/api/stations')
+        axios.get('http://127.0.0.1:3000/api/town_lists')
         .then((res) => { 
           setStations(res.data)
         })
