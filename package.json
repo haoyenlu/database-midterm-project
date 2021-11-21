@@ -1,0 +1,10 @@
+{
+  "name": "NTUIM_DBM_web_tutorial",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "deanchenn <b07505001@ntu.edu.tw>",
+  "license": "MIT",
+  "dependencies": {
+    "react-script": "^2.0.5"
+  }
+}
