@@ -1,6 +1,8 @@
 # 全台遊憩水域資訊系統
 使用者輸入縣市、鄉鎮市區後，可以得知該地的水域、海灘相關資訊。
 
+> 此文件參考助教所提供之1101_NTUIM_DBM_web_tutorial/readme.md
+
 ### Contributors & Tasks
 
 
