@@ -14,9 +14,10 @@ beautifulsoup4==4.10.0
 bs4==0.0.1
 googlemaps==4.5.3
 numpy==1.20.3
-panda==1.2.5
+pandas==1.2.5
 pinyin==0.4.0
 requests==2.25.0
 selenium==4.0.0
 urllib3==1.26.7
 webdriver-manager==3.5.1
+SQLAlchemy==1.4.27
